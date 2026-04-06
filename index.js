@@ -159,4 +159,13 @@ client.on('interactionCreate', async interaction => {
   }
 });
 
+const PORT = process.env.PORT || 10000;
+
+http.createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+  res.end('Nordic RP Bot is running');
+}).listen(PORT, '0.0.0.0', () => {
+  console.log(`Web server kjører på port ${PORT}`);
+});
+
 client.login(TOKEN);
