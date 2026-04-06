@@ -88,13 +88,13 @@ client.on('guildMemberAdd', async member => {
 
 if (welcomeChannel) {
   const embed = new EmbedBuilder()
-    .setColor('#2b6cb0')
-    .setAuthor({ name: 'Nordic RP' })
-    .setTitle('Velkommen til Nordic RP 👋')
-    .setDescription(`Velkommen ${member}!\n\n👥 Du er medlem #${member.guild.memberCount}\n\n📜 Les reglene\n📝 Søk whitelist\n\nVelkommen til Nordic RP 🌌`)
-    .setThumbnail('https://cdn.discordapp.com/attachments/1489012596739805366/1490655663951446116/Nordic_winter_landscape_with_aurora.png')
-    .setFooter({ text: 'Nordic RP • Norge RP Server' })
-    .setTimestamp();
+  .setColor('#2b6cb0')
+  .setAuthor({ name: 'Nordic RP' })
+  .setTitle('Velkommen til Nordic RP 👋')
+  .setDescription(`${member}\n\n👥 Du er medlem #${member.guild.memberCount}\n\n📜 Les reglene\n📝 Søk whitelist`)
+  .setThumbnail('https://cdn.discordapp.com/attachments/1489012596739805366/1490655663951446116/Nordic_winter_landscape_with_aurora.png')
+  .setFooter({ text: 'Nordic RP • Norge RP Server' })
+  .setTimestamp();
 
   await welcomeChannel.send({ embeds: [embed] });
 } else {
